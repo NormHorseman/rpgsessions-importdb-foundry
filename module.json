@@ -1,0 +1,15 @@
+{
+    "name": "rpgsessions-importer",
+    "title": "RPGSessions Importer",
+    "description": "Importer for RPGSessions Sheets for Genesys/FFG Star Wars.",
+    "version": "1.0.0",
+    "author": "Me",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "9",
+    "esmodules": [
+        "./main.js",
+        "modules/rpg-sessions-importer.mjs"
+    ],
+    "scripts": [],
+    "packs": []
+}
