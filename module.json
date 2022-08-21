@@ -1,9 +1,9 @@
 {
-    "name": "rpgsessions-importer",
+    "name": "rpgsessions-importdb-foundry",
     "title": "RPGSessions Importer",
     "description": "Importer for RPGSessions Sheets for Genesys/FFG Star Wars.",
     "version": "1.0.0",
-    "author": "Me",
+    "author": "Norm Horseman",
     "minimumCoreVersion": "0.8.6",
     "compatibleCoreVersion": "9",
     "esmodules": [

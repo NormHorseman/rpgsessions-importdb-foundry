@@ -1,4 +1,4 @@
-import { GetKristina } from '../kristina.js'
+
 
 export default class RPGSessionsImporter {
     static async showDialog() {
@@ -13,7 +13,7 @@ export default class RPGSessionsImporter {
         data.item = "HELLP";
 
 
-        const html = await renderTemplate(`modules/rpgsessions-importer/templates/actorDialog.html`, data);
+        const html = await renderTemplate(`modules/rpgsessions-importdb-foundry/templates/actorDialog.html`, data);
 
 
         let d = new Dialog({
@@ -45,13 +45,9 @@ export default class RPGSessionsImporter {
     }
 
     static async executeImport(actor, jsonId) {
-        //jsonId = "6281cf580100969293ee4354"
-        //actorId = "HgxONTtzrA0TNAk5";
 
 
         let rpgsJson = await GetRequest("https://api.rpgsessions.com/character/" + jsonId);
-        //let rpgsJson = GetKristina();
-
 
         await this.importCharacteristics(rpgsJson, actor);
         await this.importSkills(rpgsJson, actor);
@@ -282,14 +278,6 @@ export default class RPGSessionsImporter {
             }
         });
         return newWeapon;
-    }
-
-    static KristinaJson() {
-        return GetKristina();
-    }
-
-    static KristinaActor() {
-        return game.actors.get("HgxONTtzrA0TNAk5");
     }
 }
 
